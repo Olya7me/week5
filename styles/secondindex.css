@@ -1,0 +1,176 @@
+p{
+    /* Блочная модель */
+    height: 10vh;
+    width: 20vw;
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    /* Типографика */
+    font-size: 20px;
+    font-weight: 600;
+    /* Оформление */
+    color: rgba(58, 53, 53, 0.702);
+}
+
+h1{
+    /* Типографика */
+    font-size: 30px;
+    /* Оформление */
+    color: rgba(58, 53, 53, 0.702);
+}
+
+body {
+    /* Блочная модель */
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+    margin: 0; 
+}
+
+.header, .footer {
+    /* Блочная модель */
+    flex: 0 0 content;
+    /* Оформление */
+    background-color: rgba(245, 149, 184, 0.608);
+}
+
+.header{
+    /* Блочная модель */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main {
+    /* Блочная модель */
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}
+
+.section {
+    /* Блочная модель */
+    flex: 1;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center; 
+    flex-wrap: wrap;
+    align-content: flex-end;
+    /* Оформление */
+    background-color: rgba(248, 205, 221, 0.223);
+}
+
+.section h2 {
+    /* Позиционирование */
+    position: absolute; 
+    top: 40%; 
+    left: 36%;
+    transform: translateX(-50%);
+    /* Типографика */
+    font-size: 30px;
+    /* Оформление */
+    color: rgba(58, 53, 53, 0.702);
+}
+
+.section p{
+    /* Блочная модель */
+    width: 485px;
+    /* Типографика */
+    font-size: 30px; 
+    /* Оформление */
+    background-color: rgba(252, 195, 216, 0.51);
+    color: rgba(58, 53, 53, 0.702);
+}
+
+.section .se {
+    /* Блочная модель */
+    width: 98%;
+    display: flex;
+    justify-content: center;
+}
+
+.aside {
+    /* Позиционирование */
+    position: relative;
+    /* Блочная модель */
+    width: 50vh;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    /* Типографика */
+    font-size: 24px;
+    /* Оформление */
+    color: rgba(58, 53, 53, 0.702);
+}
+
+.aside p {
+    /* Типографика */
+    font-size: 25px;
+    font-weight: 600;
+     /* Оформление */
+    color: rgba(58, 53, 53, 0.702);
+}
+
+.footer {
+    /* Блочная модель */
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+}
+
+.footer p {
+    /* Оформление */
+    background-color: antiquewhite;
+}
+
+/* Анимация */
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.section p:hover {
+    animation: scaleUp 0.3s forwards; 
+    cursor: pointer;
+}
+
+/* Стили для аудиоплеера */
+audio {
+    background-color: #ffffff; 
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #fad8d8; 
+    color: #ff69b4; 
+}
+
+audio::-webkit-media-controls-play-button {
+    color: #ff69b4; 
+}
+
+audio::-webkit-media-controls-timeline {
+    color: #f2bdbd; 
+}
+
+/* Изображения */
+.header img {
+    height: 50px; 
+    margin-left: 10px; 
+    vertical-align: middle; 
+}
+
+.aside img {
+    height: 30%; 
+    margin-left: 10px; 
+    vertical-align: middle;
+    margin: 40px 0;
+}

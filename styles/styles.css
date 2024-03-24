@@ -1,0 +1,86 @@
+body {
+    /* Типографика */
+    font-family: Arial, sans-serif;
+    /* Позиционирование */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    /* Блочная модель */
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px;
+    /* Оформление */
+    background-color: #333;
+    color: #fff;
+}
+
+header h1 {
+    /* Блочная модель */
+    align-self: flex-start;
+    margin: 0;
+}
+
+nav ul {
+    /* Блочная модель */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    /* Блочная модель */
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    /* Оформление*/
+    color: #fff;
+    text-decoration: none;
+}
+
+.gallery-container {
+    /* Блочная модель */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+}
+
+.gallery-container img {
+    /* Позиционирование */
+    position: relative; 
+    width: 30%; 
+    height: auto;
+    margin: 20px; 
+    transition: transform 0.3s ease-in-out;
+}
+    /* Анимация почему то не работает */
+.gallery-container img::after {
+    content: attr(alt); 
+    position: absolute; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #fff; 
+    padding: 10px; 
+    border-radius: 5px; 
+    bottom: 120%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    white-space: nowrap; 
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
+    z-index: 2; 
+}
+
+.gallery-container img:hover::after {
+    opacity: 1; 
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);
+    filter: grayscale(100%);
+}
+
